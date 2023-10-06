@@ -4,10 +4,8 @@ class AuthPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Material(
-        child: Center(
-      child: Text("Login Page ",
-          style: TextStyle(
-              fontSize: 48, color: Colors.blue, fontWeight: FontWeight.bold)),
+        child: Column(
+      children: [Image.asset("assets/images/auth.jpg")],
     ));
   }
 }
