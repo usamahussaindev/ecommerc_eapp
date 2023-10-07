@@ -1,4 +1,5 @@
 import 'package:ecommerc_eapp/pages/auth.dart';
+import 'package:ecommerc_eapp/utils/routes.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'pages/home_page.dart';
@@ -19,14 +20,15 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.deepPurple,
         fontFamily: GoogleFonts.lato().fontFamily,
       ),
+     // debugShowCheckedModeBanner: false,
       darkTheme: ThemeData(
-        primarySwatch: Colors.deepOrange,
+        primarySwatch: Colors.blue,
       ),
       initialRoute: "/login",
       routes: {
         "/": (context) => AuthPage(),
-        "/home": (context) => HomePage(),
-        "/login": (context) => AuthPage(),
+        MyRoutes.homeRoute: (context) => HomePage(),
+        MyRoutes.loginRoute: (context) => AuthPage(),
       },
     );
   }
